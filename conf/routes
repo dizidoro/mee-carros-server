@@ -1,0 +1,36 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+#API
+
+#Person
+GET           /api/persons            controllers.PersonController.persons(pipedrive_token)
+
+#Car
+GET           /api/cars               controllers.CarController.getAll(pipedrive_token)
+
+#Car
+POST          /api/cars/create        controllers.CarController.createCars(pipedrive_token)
+
+GET           /api/car/:id            controllers.CarController.get(pipedrive_token, id: Long)
+
+POST          /api/car                controllers.CarController.add(pipedrive_token)
+#
+PUT           /api/car/:id            controllers.CarController.update(pipedrive_token, id: Long)
+#
+DELETE        /api/car/:id            controllers.CarController.delete(pipedrive_token, id: Long)
+
+
+
+
+
+
+
+# An example controller showing a sample home page
+GET           /                       controllers.Assets.at(path="/public/html", file="index.html")
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /*file                  controllers.Assets.versioned(path="/public/html", file: Asset)
+
+

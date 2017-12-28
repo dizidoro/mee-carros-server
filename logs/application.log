@@ -1,0 +1,13 @@
+2017-12-28 09:13:00,326 [WARN] from application in play-dev-mode-akka.actor.default-dispatcher-6 - Using the following cache for assets configuration:
+	 enabledCaching = false
+	 enabledCacheControl = false
+	 defaultCacheControl = public, max-age=3600
+	 aggressiveCacheControl = public, max-age=31536000, immutable
+	 configuredCacheControl:
+
+
+2017-12-28 09:13:00,363 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.hosts.AllowedHostsFilter
+
+2017-12-28 09:13:00,454 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev)
