@@ -5,6 +5,18 @@ import java.util.List;
 
 class CarAssembler {
 
+    public static List<CarBasicDTO> toBasicDTO(List<Car> cars){
+        List<CarBasicDTO> dtos = new ArrayList<>();
+        for(Car car: cars){
+            CarBasicDTO dto = new CarBasicDTO();
+            dto.id = car.getId();
+            dto.model = car.getModel();
+            dtos.add(dto);
+        }
+        return dtos;
+    }
+
+
     public static CarDTO toDTO(Car car) {
         CarDTO dto = new CarDTO();
         dto.id = car.getId();

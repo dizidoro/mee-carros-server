@@ -21,9 +21,9 @@ class CarService {
         dao.createCarList(pipedriveToken);
     }
 
-    public List<CarDTO> getAll(String pipedriveToken) throws NoSuchTokenException {
+    public List<CarBasicDTO> getAll(String pipedriveToken) throws NoSuchTokenException {
         List<Car> cars = dao.getAll(pipedriveToken);
-        List<CarDTO> carDtos = CarAssembler.toDTO(cars);
+        List<CarBasicDTO> carDtos = CarAssembler.toBasicDTO(cars);
         return carDtos;
     }
 

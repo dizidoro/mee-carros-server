@@ -1,6 +1,7 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import models.car.CarBasicDTO;
 import models.car.CarDTO;
 import models.car.CarManager;
 import models.car.IdDTO;
@@ -27,7 +28,7 @@ public class CarController extends Controller {
     public Result getAll(String pipedriveToken) {
         Result result;
         try {
-            List<CarDTO> dtos = this.manager.getAllCars(pipedriveToken);
+            List<CarBasicDTO> dtos = this.manager.getAllCars(pipedriveToken);
             result = ok(Json.toJson(dtos));
         } catch (NoSuchTokenException e) {
             Error error = new Error(e.getMessage());

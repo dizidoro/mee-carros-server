@@ -64,8 +64,11 @@ class CarDAO {
     }
 
     public void update(String token, Car car) throws NoSuchTokenException, NoCarWithSuchIdException{
-        delete(token, car.getId());
-        add(token, car);
+        Car old = this.get(token, car.getId());
+        old.setModel(car.getModel());
+        old.setColor(car.getColor());
+        old.setPersonId(car.getPersonId());
+        old.setYear(car.getYear());
     }
 
     public void delete(String token, Long id) throws NoSuchTokenException, NoCarWithSuchIdException{

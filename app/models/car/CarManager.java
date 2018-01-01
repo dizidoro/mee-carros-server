@@ -22,7 +22,7 @@ public class CarManager {
         return this.service.get(pipedriveToken, id);
     }
 
-    public List<CarDTO> getAllCars(String pipedriveToken) throws NoSuchTokenException {
+    public List<CarBasicDTO> getAllCars(String pipedriveToken) throws NoSuchTokenException {
         return this.service.getAll(pipedriveToken);
     }
 
